@@ -8,4 +8,5 @@ vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 vim.opt.list = false
 vim.g.autoformat = false
 vim.g.codeium_enabled = false
-
+vim.g.snacks_animate = false
+vim.o.termguicolors = false

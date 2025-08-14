@@ -41,10 +41,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("v", "<leader>s", [[:s/]])
 
 -- change diagnostic symbols to letters
-local symbols = { Error = "E", Info = "I", Hint = "H", Warn = "W" }
+local symbols = { Error = "E", Info = "I", Hint = "H", Warn = "W", Breakpoint = "B"}
 
 for name, icon in pairs(symbols) do
   local hl = "DiagnosticSign" .. name
   vim.fn.sign_define(hl, { text = icon, numhl = "", texthl = hl })
 end
-

@@ -92,6 +92,19 @@ return {
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
+        templ = {
+          on_attach = on_attach,
+        },
+        html = {
+          on_attach = on_attach,
+          filetypes = { "html", "templ" },
+        },
+        htmx = {
+          filetypes = { "html", "templ" },
+        },
+        gopls = {
+          templateExtensions = { "templ" },
+        },
       },
     },
   },
@@ -160,8 +173,10 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "java",
         "bash",
         "html",
+        "templ",
         "go",
         "javascript",
         "json",
@@ -189,6 +204,11 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "tsx",
         "typescript",
+      })
+      vim.filetype.add({
+        extension = {
+          templ = "templ",
+        },
       })
     end,
   },
