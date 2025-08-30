@@ -18,10 +18,10 @@ require("lazy").setup({
   },
   defaults = {
     lazy = false,
-    version = false, 
+    version = false,
   },
   install = { colorscheme = {} },
-  checker = { enabled = false }, 
+  checker = { enabled = false },
   performance = {
     rtp = {
       disabled_plugins = {
@@ -51,5 +51,5 @@ handle:close()
 if mode:match("Dark") then
   vim.cmd.colorscheme("rose-pine")
 else
-  vim.cmd.colorscheme("github_light")
+  vim.cmd.colorscheme("jb")
 end
