@@ -1,4 +1,3 @@
--- install without yarn or npm
 return {
   {
     "iamcco/markdown-preview.nvim",

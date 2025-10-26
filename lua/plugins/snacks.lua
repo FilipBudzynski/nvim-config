@@ -1,7 +1,13 @@
 return {
     "folke/snacks.nvim",
-    lazy = false,
-    opts = function (_, opts)
-        opts.indent = { enabled = false}
-    end
+    opts = {
+        indent = {
+            enabled = false,
+        },
+        dashboard = {
+            preset = {
+                header = Medievil_lazyvim,
+            },
+        },
+    },
 }
